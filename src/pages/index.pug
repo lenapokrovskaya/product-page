@@ -1,0 +1,22 @@
+extends template/_layout
+
+include ../components/header/header
+include ../components/toggle/toggle
+include ../components/main/main
+include ../components/categories/categories
+include ../components/category/category
+include ../components/products__item/products__item
+include ../components/btn/btn
+include ../components/modal/modal
+include ../components/btn__top/btn__top
+include ../components/footer/footer
+
+block vars
+	- var title = "Каталог";
+
+block content 
+	+header()
+	+main()
+	+footer()
+	+btn__top()
+	+modal()

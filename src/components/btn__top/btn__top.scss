@@ -1,0 +1,32 @@
+.btn-top {
+	position: absolute;
+	bottom: 120px;
+	right: 50px;
+	width: 48px;
+	font-size: 18px;
+	line-height: 48px;
+	background-color: var(--text-color);
+	color: var(--primary-color);
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+}
+  
+.btn-top--hidden {
+	display: none;
+}
+
+.btn-top--show {
+	display: block;
+	animation: fade 0.3s linear;
+}
+
+@keyframes fade {
+	0% {opacity: 0;}
+	50% {opacity: 0.5;}
+	100% {opacity: 1;}
+}
+
+	
+  
+  

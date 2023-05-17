@@ -1,0 +1,20 @@
+.btn-toggle {
+  padding: 10px;
+  border: 1px solid var(--text-color);
+}
+
+.page {
+  --text-color: #6753d9;
+  --bkg-color: #eae9f2;
+}
+
+.page.dark-theme {
+  --text-color: #9484f2;
+  --bkg-color: #17161a;
+}
+
+.page {
+  background: var(--bkg-color);
+  color: var(--text-color);
+}
+/*# sourceMappingURL=toggle.css.map */

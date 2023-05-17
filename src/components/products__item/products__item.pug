@@ -1,0 +1,12 @@
+mixin products__item(data)
+	li.products__item.products-item
+		article.products-item__card
+			a.products-item__link-img(href=data.href)
+				picture
+					source(media="(min-width: 1440px)" srcset=data.imgsrcDesc)
+					source(media="(min-width: 768px)" srcset=data.imgsrcTab)
+					img.products-item__img(src=data.imgsrc, srcset=data.imgsrcset, alt=data.imgalt, loading="lazy")
+			h3.products-item__title=data.title
+			.products-item__details
+				p.products-item__date=data.date
+				+btn('#', 'Купить')(class="btn products-item__button")

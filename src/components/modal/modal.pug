@@ -1,0 +1,33 @@
+mixin modal(href, text)
+    section.modal.modal--hidden
+        form#order-form.modal__form.order-form(method='get' action='https://echo.htmlacademy.ru')
+            h2.order-form__title Детали заказа
+            .order-form__data
+            .order-form__amount
+                label.order-form__label-amount(for='product-amount') Количество:*
+                input#product-amount.order-form__input(type='number' name='amount' placeholder='1'  min= '1' required)
+            .order-form__colors
+                h3.order-form__colors-title Выберите цвет:*
+                ul.order-form__radio-list
+                    li.order-form__radio-item
+                        input#white.order-form__radio-input.visually-hidden(type='radio' name='color' value='white' required)
+                        label.visually-hidden(for='white') Белый
+                    li.order-form__radio-item
+                        input#black.order-form__radio-input.visually-hidden(type='radio' name='color' value='black')
+                        label.visually-hidden(for='black') Черный
+                    li.order-form__radio-item
+                        input#green.order-form__radio-input.visually-hidden(type='radio' name='color' value='green')
+                        label.visually-hidden(for='green') Зелёный
+                    li.order-form__radio-item
+                        input#blue.order-form__radio-input.visually-hidden(type='radio' name='color' value='blue')
+                        label.visually-hidden(for='blue') Синий
+                    li.order-form__radio-item
+                        input#red.order-form__radio-input.visually-hidden(type='radio' name='color' value='red')
+                        label.visually-hidden(for='red') Красный
+            .order-form__comment
+            label.visually-hidden(for='text-comment') Комментарий
+            textarea#text-comment.order-form__comment-text(name='comment' maxlength='2000' rows="8" placeholder='You can leave a comment (2000 characters)')
+            .order-form__buttons
+                button.btn.order-form__button.order-form__button-buy(type='submit') Купить
+                button.btn.order-form__button.order-form__button-close(type='button') Закрыть
+            p.order-form__note *&mdash; Обязательные поля

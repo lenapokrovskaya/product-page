@@ -1,0 +1,31 @@
+mixin header()
+	header.page-header.header
+		.header__container
+			.header__wrapper
+				a.header__logo(href='#')
+					img.header__logo-img(src='img/header/logo.svg' width='50' height='50' alt='Sneaker shop')
+			nav.main-nav.main-nav--closed
+				button.main-nav__toggle
+					span.visually-hidden Открыть меню
+				.main-nav__wrapper
+					+toggle()
+					-
+						const list = [
+							{
+								href: '#men',
+								text: 'Мужчины',
+							},
+							{
+								href: '#women',
+								text: 'Женщины',
+							},
+							{
+								href: '#kids',
+								text: 'Дети',
+							},
+						];
+					ul.main-nav__list.site-list
+						each item in list 
+							li.site-list__item
+								a.site-list__link(href=`${item.href}`)= item.text
+								
